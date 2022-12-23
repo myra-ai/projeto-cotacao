@@ -79,7 +79,7 @@
 
                             $model = new Model();
                             $rows = $model->fetch();
-                            $i = 1;
+                          
                             if(!empty($rows)){
                             foreach($rows as $row){ 
                          ?>
