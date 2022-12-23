@@ -65,7 +65,7 @@
                                 ON cotacao.id_servico = servicos.`id`
                                 INNER JOIN transportadoras
                                 ON servicos.id_transportadora = transportadoras.id
-                                WHERE ( cep_inicio <= '$cep_inicio' AND cep_final >= '$cep_final') ";
+                                WHERE ( cep_inicio >= '$cep_inicio' AND cep_final <= '$cep_final') ";
                                 if ($sql = $this->conn->query($query)) {
                                     while ($row = mysqli_fetch_assoc($sql)) {
                                         $data[] = $row;
